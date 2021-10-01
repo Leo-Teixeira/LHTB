@@ -49,6 +49,11 @@ namespace AP3_FormaFlix
         {
             Controleur.VmodeleC.charger("select IDCOMPETENCE, LIBELLECOMPETENCE from competence  WHERE LIBELLECOMPETENCE = '" + libC + "';", Controleur.VmodeleC.DT[4]);
         }
+
+        public void charger_la_formation(int index)
+        {
+            Controleur.VmodeleC.charger("select IDFORMATION, LIBELLE, DESCRIPTION, IDENTIFIANTVIDEO, VISIBILITEPUBLIC, DATEVISIBILITE, IMAGE from formation WHERE IDFORMATION = '" + index + "';", Controleur.VmodeleC.DT[5]);
+        }
         /// <summary>
         /// Permet d'ajouter une formation à la table FORMATION avec les éléments du formulaire passés en paramètre
         /// </summary>

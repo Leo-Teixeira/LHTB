@@ -13,7 +13,6 @@ namespace AP3_FormaFlix
     public partial class FormModifFormation : Form
     {
         private int index;
-        private int visible;
         public FormModifFormation(int index)
         {
             InitializeComponent();
@@ -22,13 +21,13 @@ namespace AP3_FormaFlix
 
         private void FormModifFormation_Load(object sender, EventArgs e)
         {
-            Controleur.VmodeleF.charger_Formations();
+            Controleur.VmodeleF.charger_la_formation(index);
             Controleur.VmodeleF.charger_Competences();
             chargerComboBoxCompetences();
             if (Controleur.VmodeleC.Chargement)
             {
                 MessageBox.Show(index.ToString());
-                if (Convert.ToInt32(Controleur.VmodeleC.DT[1].Rows[index - 1]["VISIBILITEPUBLIC"]) == 1)
+                if (Convert.ToInt32(Controleur.VmodeleC.DT[5].Rows[0]["VISIBILITEPUBLIC"]) == 1)
                 {
                     cbVisibleModif.Checked = true;
                 }
@@ -36,12 +35,12 @@ namespace AP3_FormaFlix
                 {
                     cbVisibleModif.Checked = false;
                 }
-                tbLibelleModif.Text = Controleur.VmodeleC.DT[1].Rows[index - 1]["LIBELLE"].ToString();
-                tbDescriptionModif.Text = Controleur.VmodeleC.DT[1].Rows[index - 1]["DESCRIPTION"].ToString();
-                tbVideoModif.Text= Controleur.VmodeleC.DT[1].Rows[index - 1]["IDENTIFIANTVIDEO"].ToString();
-                tbImageModif.Text = Controleur.VmodeleC.DT[1].Rows[index - 1]["IMAGE"].ToString();
+                tbLibelleModif.Text = Controleur.VmodeleC.DT[5].Rows[0]["LIBELLE"].ToString();
+                tbDescriptionModif.Text = Controleur.VmodeleC.DT[5].Rows[0]["DESCRIPTION"].ToString();
+                tbVideoModif.Text= Controleur.VmodeleC.DT[5].Rows[0]["IDENTIFIANTVIDEO"].ToString();
+                tbImageModif.Text = Controleur.VmodeleC.DT[5].Rows[0]["IMAGE"].ToString();
 
-                dtp1Modif.Value = Convert.ToDateTime(Controleur.VmodeleC.DT[1].Rows[index - 1]["DATEVISIBILITE"]);
+                dtp1Modif.Value = Convert.ToDateTime(Controleur.VmodeleC.DT[5].Rows[0]["DATEVISIBILITE"]);
             }
         }
 
