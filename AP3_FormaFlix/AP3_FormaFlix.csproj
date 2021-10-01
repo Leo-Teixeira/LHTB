@@ -87,6 +87,13 @@
     <Compile Include="FormSuppFormation.Designer.cs">
       <DependentUpon>FormSuppFormation.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListeCommentaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeCommentaire.Designer.cs">
+      <DependentUpon>ListeCommentaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModeleCommentaire.cs" />
     <Compile Include="ModeleConnexion.cs" />
     <Compile Include="ModeleFormation.cs" />
     <Compile Include="Modif.cs">
@@ -114,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSuppFormation.resx">
       <DependentUpon>FormSuppFormation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeCommentaire.resx">
+      <DependentUpon>ListeCommentaire.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modif.resx">
       <DependentUpon>Modif.cs</DependentUpon>

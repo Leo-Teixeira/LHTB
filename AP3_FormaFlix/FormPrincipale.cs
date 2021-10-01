@@ -78,5 +78,11 @@ namespace AP3_FormaFlix
             Modif M = new Modif();
             M.Show();
         }
+
+        private void ListeDesCommentairesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListeCommentaire LC = new ListeCommentaire();
+            LC.Show();
+        }
     }
 }

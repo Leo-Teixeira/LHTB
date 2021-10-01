@@ -15,9 +15,11 @@ namespace AP3_FormaFlix
     {
         private static ModeleConnexion vmodeleC;
         private static ModeleFormation vmodeleF;
+        private static ModeleCommentaire vmodeleCom;
 
         public static ModeleFormation VmodeleF { get => vmodeleF; set => vmodeleF = value; }
         public static ModeleConnexion VmodeleC { get => vmodeleC; set => vmodeleC = value; }
+        public static ModeleCommentaire VmodeleCom { get => vmodeleCom; set => vmodeleCom = value; }
 
         public static void initConnexion()
         {
@@ -26,6 +28,10 @@ namespace AP3_FormaFlix
         public static void initFormation()
         {
             VmodeleF = new ModeleFormation();
+        }
+        public static void initCommentaire()
+        {
+            VmodeleCom = new ModeleCommentaire();
         }
 
     }

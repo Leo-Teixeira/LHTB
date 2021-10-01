@@ -39,6 +39,8 @@
             this.modifierUneFormationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supprimerUneFormationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionDesCommentairesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listeDesCommentairesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +49,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.connexionToolStripMenuItem,
             this.gestionDesFormationsToolStripMenuItem,
+            this.gestionDesCommentairesToolStripMenuItem,
             this.quitterToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -123,6 +126,21 @@
             this.quitterToolStripMenuItem.Text = "Quitter";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.QuitterToolStripMenuItem_Click);
             // 
+            // gestionDesCommentairesToolStripMenuItem
+            // 
+            this.gestionDesCommentairesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listeDesCommentairesToolStripMenuItem});
+            this.gestionDesCommentairesToolStripMenuItem.Name = "gestionDesCommentairesToolStripMenuItem";
+            this.gestionDesCommentairesToolStripMenuItem.Size = new System.Drawing.Size(159, 20);
+            this.gestionDesCommentairesToolStripMenuItem.Text = "Gestion des commentaires";
+            // 
+            // listeDesCommentairesToolStripMenuItem
+            // 
+            this.listeDesCommentairesToolStripMenuItem.Name = "listeDesCommentairesToolStripMenuItem";
+            this.listeDesCommentairesToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.listeDesCommentairesToolStripMenuItem.Text = "Liste des commentaires";
+            this.listeDesCommentairesToolStripMenuItem.Click += new System.EventHandler(this.ListeDesCommentairesToolStripMenuItem_Click);
+            // 
             // FormPrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -160,6 +178,8 @@
         private System.Windows.Forms.ToolStripMenuItem reconnecterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modifierUneFormationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem supprimerUneFormationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestionDesCommentairesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listeDesCommentairesToolStripMenuItem;
     }
 }
 
