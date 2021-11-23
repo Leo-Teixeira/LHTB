@@ -62,9 +62,18 @@ class Formation extends Web
 
         // Compétence assocés à la vidéo
         $competences = $this->formationModel->competencesFormation($video["IDFORMATION"]);
-        $commentaires = $this->formationModel->getAll(); // Récupération des TODOS présents en base.
+        // commentaires assocés a la vidéo
+        $commentaires = $this->formationModel->getAll(); // Récupération des commentaires présents en base.
         $this->header();
         include("./views/formation/tv.php");
         $this->footer();
+
+
+    }
+
+    function ajouter($texte = "" ,$note="")
+    {
+        $this->formationModel->ajouterCommentaire($texte,$note);
+        $this->redirect("./formations");
     }
 }

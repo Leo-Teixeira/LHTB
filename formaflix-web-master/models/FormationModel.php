@@ -39,4 +39,12 @@ class FormationModel extends SQL
         $stmt->execute([$id]);
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
+
+    function ajouterCommentaire($texte,$note)
+    {
+        $stmt = $this->pdo->prepare("INSERT INTO commentaire (IDCOMMENTAIRE, LIBELLECOMMENTAIRE, NOTECOMMENTAIRE, STATUSCOMMENTAIRE) VALUES (null, ?, ?, 0)");
+        $stmt->bindParam(1, $texte);
+        $stmt->bindParam(2, $note);
+        $stmt->execute();
+    }
 }

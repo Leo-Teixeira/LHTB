@@ -20,6 +20,7 @@ class Web
         Route::Add('/formations', [$formation, 'home']);
         Route::Add('/tv', [$formation, 'tv']);
         Route::Add('/about', [$main, 'about']);
+        Route::Add('/ajouter', [$formation, 'ajouter']);
         Route::Add('/login', [$account, 'login']);
         Route::Add('/register', [$account, 'register']);
 
